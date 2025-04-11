@@ -23,6 +23,7 @@ PROJECT_ID = os.environ.get("PROJECT_ID", "hopkinstimesheetproj")
 DASHBOARD_TOPIC = f"projects/{PROJECT_ID}/topics/dashboard-queue"
 publisher = pubsub_v1.PublisherClient()
 
+
 def pto_deduction_pubsub(event, context):
     """
     Cloud Function triggered by a Pub/Sub message for PTO deduction.
